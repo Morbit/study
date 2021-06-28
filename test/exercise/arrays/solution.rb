@@ -1,16 +1,16 @@
 module Exercise
   module Arrays
     class << self
-      def find_max(arry)
+      def find_max(array)
         max_value = array.first
-        arr.each do |value|
+        array.each do |value|
           max_value = value if value > max_value
         end
         max_value
       end
 
       def replace(array)
-        max = find_max(array)
+        max_value = find_max(array)
         result = []
 
         array.each do |value|
