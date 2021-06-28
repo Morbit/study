@@ -6,6 +6,7 @@ module Exercise
         array.each do |value|
           max_value = value if value > max_value
         end
+
         max_value
       end
 
@@ -27,9 +28,10 @@ module Exercise
       def search(array, search_element, index = 0)
         middle_index = (array.size / 2).round
 
-        return -1 if array.empty? || array.size == 1 && array.first != search_element
-
+        return -1 if array.empty? 
+        return -1 if array.size == 1 && array.first != search_element
         return index if array.first == search_element
+
 
         if search_element >= array[middle_index]
           right_side_of_array = array[middle_index, array.size] = array[middle_index, array.size]
